@@ -119,6 +119,7 @@ ul {
 }
 /* link nav*/
 .navigation-link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
@@ -127,27 +128,10 @@ ul {
   font-size: 14px;
   line-height: 1.14;
 }
-.navigation-link:hover:after,
-.navigation-link:focus:after {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  position: absolute;
-  top: 76px;
-  content: '';
-  background: var(--accent-color);
-  border-radius: 2px;
-  width: 100%;
-  height: 4px;
-  display: block;
-}
+
 .navigation-link:hover,
 .navigation-link:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--header-nav-hover);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .current-nav-item {
   position: relative;
@@ -170,6 +154,8 @@ ul {
 }
 /* contact header*/
 .contact-header {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,8 +175,6 @@ ul {
 }
 .contact-header-item:hover,
 .contact-header-item:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: var(--accent-color);
 }
 .contact-link-header {
@@ -205,8 +189,6 @@ ul {
 }
 .contact-header:hover,
 .contact-header:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: var(--accent-color);
   color: var(--contact-hover);
 }
@@ -256,7 +238,7 @@ ul {
   padding: 10px 32px;
   border-radius: 4px;
   min-width: 200px;
-  border-color: var(--accent-color);
+  border-color: transparent;
   color: var(--heading-color-hero);
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -264,13 +246,13 @@ ul {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover,
 .hero-button:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background: #188ce8;
-  border-color: var(--accent-color);
+  border-color: transparent;
   color: var(--heading-color-hero);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -278,6 +260,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
   top: 0;
   left: 0;
   position: fixed;
@@ -369,6 +352,9 @@ ul {
   display: flex;
 }
 .work-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0px;
   position: absolute;
   background: rgba(47, 48, 58, 0.8);
@@ -385,14 +371,10 @@ ul {
   text-align: center;
 }
 .work-block-heading {
-  display: block;
-  padding: 0 auto;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  position: absolute;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   color: var(--heading-color-hero);
   text-transform: uppercase;
 }
@@ -468,8 +450,6 @@ ul {
 }
 .social-link:hover,
 .social-link:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background: var(--accent-color);
   fill: var(--logo-footer);
 }
@@ -480,14 +460,14 @@ ul {
   border-radius: 50%;
   width: 100%;
   height: 100%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   fill: #afb1b8;
 }
 
 .social-icon:hover,
 .social-icon:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: #ffffff;
 }
 /* regular customer */
@@ -519,11 +499,11 @@ ul {
   border-radius: 4px;
   border: 1px solid #afb1b8;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reg-customer-link:hover,
 .reg-customer-link:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
 }
@@ -556,11 +536,10 @@ ul {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-footer:hover,
 .contact-footer:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--accent-color);
 }
 .footer-address {
@@ -588,11 +567,10 @@ ul {
   border-radius: 50%;
   background: #ffffff1a;
   fill: var(--fill-social-footer);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-footer:hover,
 .social-link-footer:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background: var(--accent-color);
 }
 .social-footer-item {
@@ -625,7 +603,7 @@ ul {
   margin-left: 0px;
 }
 .portfolio-button {
-  display: inline-block;
+  display: block;
   padding: 6px 20px;
   border-radius: 4px;
   border-color: transparent;
@@ -637,12 +615,14 @@ ul {
   line-height: 1.62;
 
   cursor: pointer;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
 .portfolio-button:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--portfolio-button-hover);
   color: var(--portfolio-button);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -676,13 +656,35 @@ ul {
 }
 .portfolio-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-block-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-item:hover .portfolio-block-text {
+  transform: translateY(0);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-block-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 64px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item {
   width: 370px;
