@@ -277,8 +277,8 @@ ul {
   pointer-events: none;
 }
 .backdrop-icon {
-  width: 30px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
 }
 .modal {
   position: absolute;
@@ -299,13 +299,18 @@ ul {
   align-items: flex-start;
 }
 .btn-modal {
-  left: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
   cursor: pointer;
-  padding: 0;
-  margin-right: 8px;
-  margin-top: 8px;
-  border: 0px;
   background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
 }
 /* features */
 
